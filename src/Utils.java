@@ -33,7 +33,7 @@ public class Utils {
         return vertices;
     }
 
-    public static void generateHTMLSoltion(Vertex[][] vertices, List<Vertex> path, Vertex startVertex, Vertex endVertex) {
+    public static void generateHTMLSolution(Vertex[][] vertices, List<Vertex> path, Vertex startVertex, Vertex endVertex) {
         StringBuilder builder = new StringBuilder();
 
         builder.append("<html><body>");
@@ -58,14 +58,14 @@ public class Utils {
             builder.append("<br>");
         }
 
-        builder.append("<br>Start: ").append(startVertex).append(", Koniec: ").append(endVertex).append("<br>");
+        builder.append("<br>Start: ").append(startVertex).append(", Finish: ").append(endVertex).append("<br>");
 
         if(path.size() < 1)
-            builder.append("<b>Brak drogi!</br>");
+            builder.append("<b>No path found!</br>");
         else
         {
-            builder.append("Istnieje droga: ").append(path).append("<br>");
-            builder.append("Długosc drogi: ").append(path.size());
+            builder.append("The path exists: ").append(path).append("<br>");
+            builder.append("Path length: ").append(path.size());
         }
 
         builder.append("</body></html>");

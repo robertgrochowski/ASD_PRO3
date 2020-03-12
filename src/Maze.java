@@ -42,7 +42,7 @@ public class Maze {
 
     public void solveMaze(){
         Graph graph = new Graph(startVertex, endVertex, vertices);
-        Utils.generateHTMLSoltion(vertices, getPathBFS(graph), startVertex, endVertex);
+        Utils.generateHTMLSolution(vertices, getPathBFS(graph), startVertex, endVertex);
     }
 
     List<Vertex> getPathBFS(Graph graph)
